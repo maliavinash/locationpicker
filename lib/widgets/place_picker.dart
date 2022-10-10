@@ -530,7 +530,7 @@ class PlacePickerState extends State<PlacePicker> {
       return;
     }
 
-    Location().getLocation().then((locationData) {
+    getLocation().then((locationData) {
       LatLng target = LatLng(locationData.latitude!, locationData.longitude!);
       moveToLocation(target);
     }).catchError((error) {
